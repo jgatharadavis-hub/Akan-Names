@@ -1,0 +1,85 @@
+/* General Styling */
+body {
+  background-color: #fdf5e6;
+  color: #3e2723;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #11492234;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #d35400;
+}
+
+h1 {
+  text-align: center;
+  color: #8e44ad;
+  margin-bottom: 20px;
+}
+
+header {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.info-section {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+ul {
+  margin: 10px 0 0 20px;
+}
+
+/* Form Elements */
+#nameForm {
+  background: #362e0dad;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #2761ae;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #739121;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #8e44ad;
+}
