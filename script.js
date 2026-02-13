@@ -1,22 +1,36 @@
-const styles = `
-#result {
-    margin-top: 20px;
-    padding: 15px;
-    background: #fdf3cf;
-    border: 2px solid #d35400;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2rem;
-    display: none; /* Hidden until generated */
-}
+const maleNames = {
+  sunday: "Kwasi",
+  monday: "Kwadwo",
+  tuesday: "Kwabena",
+  wednesday: "Kwaku",
+  thursday: "Yaw",
+  friday: "Kofi",
+  saturday: "Kwame",
+};
 
-.highlight {
-    color: #d35400;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-`;
+const femaleNames = {
+  sunday: "Akosua",
+  monday: "Adwoa",
+  tuesday: "Abena",
+  wednesday: "Yaa",
+  thursday: "Esi",
+  friday: "Afua",
+  saturday: "Ama",
+};
 
-const styleEl = document.createElement('style');
-styleEl.textContent = styles;
-document.head.appendChild(styleEl);
+document.getElementById("nameForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const gender = document.getElementById("gender").value;
+  const day = document.getElementById("day").value;
+
+  if (!gender || !day) {
+    document.getElementById("result").textContent =
+      "Please select both gender and day.";
+    return;
+  }
+
+  const name = gender === "male" ? maleNames[day] : femaleNames[day];
+
+  document.getElementById("result").textContent = "Your Akan name is: " + name;
+});

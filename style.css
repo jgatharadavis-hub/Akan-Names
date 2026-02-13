@@ -1,85 +1,115 @@
-/* General Styling */
 body {
-  background-color: #fdf5e6;
-  color: #3e2723;
   font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #050541, #b39d9d);
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   padding: 40px 20px;
+  color: #a7301b;
 }
 
 .container {
-  background: #11492234;
-  max-width: 650px;
+  background: rgba(255, 255, 255, 0.342);
+  width: 90%;
+  max-width: 400px;
   padding: 30px;
+  text-align: center;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-top: 8px solid #d35400;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-  text-align: center;
-  color: #8e44ad;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-header {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #d35400;
-  margin-bottom: 10px;
-}
-
-.info-section {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-ul {
-  margin: 10px 0 0 20px;
-}
-
-/* Form Elements */
-#nameForm {
-  background: #362e0dad;
-  padding: 25px;
-  border-radius: 8px;
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 label {
-  font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 
-select {
+select,
+input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ca0c0c;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+select:focus,
+input:focus {
+  border-color: #4e73df;
+  outline: none;
+  box-shadow: 0 0 5px rgba(78, 115, 223, 0.4);
 }
 
 button {
   width: 100%;
-  padding: 15px;
-  background: #2761ae;
-  color: white;
+  padding: 0.8rem;
   border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
+  background: #4e73df;
+  color: rgba(255, 255, 255, 0.767);
   font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background: #739121;
+  background: #2e59d9;
+  transform: translateY(-2px);
 }
 
 #result {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.3rem;
-  color: #8e44ad;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #f8f9fc17;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1cc88a;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+}
+
+/* Animation */
+.animate {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
 }
